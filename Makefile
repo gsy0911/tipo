@@ -20,7 +20,7 @@ help:
 .PHONY: help
 
 test-python:
-	pytest ./test -vv --cov=./{your_module} --cov-report=html
+	pytest ./test -vv --cov=./tipo --cov-report=html
 
 deploy:
 	twine upload dist/*
@@ -32,4 +32,4 @@ wheel:
 	python setup.py sdist bdist_wheel
 
 clean:
-	rm -f -r {your_module}.egg-info/* dist/* -y
+	rm -f -r tipo.egg-info/* dist/* -y
