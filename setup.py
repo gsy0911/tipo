@@ -17,7 +17,7 @@ def get_version(init_file_path):
 
 # get __version__ from __init__.py
 init = os.path.join(
-    os.path.dirname(__file__), '{your_module}', '__init__.py'
+    os.path.dirname(__file__), 'tipo', '__init__.py'
 )
 VERSION = get_version(init_file_path=init)
 
