@@ -36,10 +36,14 @@ setuptools.setup(
     url="https://github.com/gsy0911/tipo",
     packages=setuptools.find_packages(),
     install_requires=[
-        "some",
-        "package"
+        "click"
     ],
     license="MIT",
+    entry_points={
+        'console_scripts': [
+            'tipo = tipo.cli:main',
+        ]
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
