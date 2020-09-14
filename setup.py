@@ -17,7 +17,7 @@ def get_version(init_file_path):
 
 # get __version__ from __init__.py
 init = os.path.join(
-    os.path.dirname(__file__), '{your_module}', '__init__.py'
+    os.path.dirname(__file__), 'tipo', '__init__.py'
 )
 VERSION = get_version(init_file_path=init)
 
@@ -36,10 +36,14 @@ setuptools.setup(
     url="https://github.com/gsy0911/tipo",
     packages=setuptools.find_packages(),
     install_requires=[
-        "some",
-        "package"
+        "click"
     ],
     license="MIT",
+    entry_points={
+        'console_scripts': [
+            'tipo = tipo.cli:main',
+        ]
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
