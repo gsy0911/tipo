@@ -26,7 +26,7 @@ class CliFactory:
             r2 = insert_large_str(r1, constants.KORE, 3, 14)
             prompter.echo(r2)
 
-    def execute_flake8(self, file_path: str, prompter):
+    def execute_flake8(self, file_path: str):
         flake8_command = ["flake8", file_path, f"--ignore={','.join(self.IGNORE_CODE)}"]
         try:
             response = subprocess.run(
@@ -36,7 +36,10 @@ class CliFactory:
                 stderr=subprocess.PIPE
             )
         except subprocess.CalledProcessError as e:
-            raise e
+            if e.stdout:
+                return e.stdout
+            return e.stderr
         else:
             if response.stdout:
-                self.insert_english_taki(prompter=prompter)
+                return response.stdout
+        return None
