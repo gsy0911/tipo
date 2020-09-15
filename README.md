@@ -8,7 +8,7 @@ As same as `typo`
 
 ## What is `TIPO` ?
 
-`TIPO` is typo of typo.
+`TIPO` is typo of `typo`.
 
 ## So what ?
 
@@ -35,5 +35,15 @@ $ tipo {your_python_script.py}
 In addition, you can use a option below.
 
 ```shell script
-$ tipo {your_python_script.py} --taki
+$ tipo --taki {your_python_script.py} 
 ```
+
+# Limitations
+
+* no test codes.
+
+# Thanks
+
+* [image_to_ascii](https://tool-taro.com/image_to_ascii/)
+* [remove.bg](https://www.remove.bg/ja)
+* [Generate Large Alphabet AA](https://en.rakko.tools/tools/68/)
