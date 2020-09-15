@@ -36,7 +36,8 @@ setuptools.setup(
     url="https://github.com/gsy0911/tipo",
     packages=setuptools.find_packages(),
     install_requires=[
-        "click"
+        "click",
+        "flake8"
     ],
     license="MIT",
     entry_points={

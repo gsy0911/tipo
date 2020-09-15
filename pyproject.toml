@@ -8,6 +8,7 @@ authors = ["gsy0911 <yoshiki0911@gmail.com>"]
 python = "^3.7"
 click = "^7.1.2"
 wheel = "^0.35.1"
+flake8 = "^3.8.3"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^2.1.1"
